@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- - SOURCE UTILISÉ:
+         - http://sdz.tdct.org/sdz/menus-en-onglets.html 
+         - https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+         - le cours
+         - https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside 
+         - https://www.byfilling.com/thefacts/comment-ajouter-un-lien-google-maps-dans-votre-site-web
+        -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Inscription
+	</title>
+    <link href="Réservation.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header>
+    <h1 style=" margin-left: 30%; margin-right: 30%;background-color: red; padding-bottom: 1%;padding-top: 1% ">
+        <img src="Photo/Logo_accueil.png" alt="Mon image" height="150" width="300" class="logo">
+        <nav style="text-align-last: center;">
+            <!-- Un formulaire de recherche est une autre façon de naviguer de
+                 façon non‑linéaire dans un site introduit via le site suivant https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+            <form>
+              <input type="search" value="" name="accueil" placeholder="Rechercher" OnKeyPress="if (event.keyCode == 13)FindNext()" class="submit" id="findField">
+              <input type="submit" value="Valider" class="submit" OnClick="FindNext()" >
+            </form>
+       </nav>
+    </h1>
+            <div id="position-menu">
+                <ul id="onglets">
+                <li style="font-size: 5mm"><a href="Page_D'accueil.html" > Accueil </a></li>
+                <li class="active" style="font-size: 5mm"><a href="Réservation.html"> Billetterie </a></li>
+                <li style="font-size: 5mm"><a href="Photo_du_complexe.html"> Photo </a></li>
+                <li style="font-size: 5mm"><a href="Inscription.html"> S'inscrire </a></li>
+                <li style="font-size: 5mm"><a href="Connexion.html"> Se_connecter </a></li>
+                <li style="font-size: 5mm"><a href="Page_à_propos.html"> À_propos </a></li>
+                </ul>
+            </div>
+            <h1>
+                <b style="text-decoration: underline"> Détaillez votre réservation</b>
+            </h1>
+            <h2>
+                <b> Coordonnées</b>
+            </h2>
+            <form action="traitement" name="monformulaire" method="post" style="margin-left: 10%" onSubmit="return Verification()" >
+                <div>
+                    <label for="idNom"><b>Nom <span class="text-danger"></span> </b> </label>
+                    <br>
+                    <input type="text" id="idNom" name="nom" minlength="1" maxlength="30" placeholder=Nom required='required'>
+                </div>
+                <br>
+                <div>
+                    <label for="idPrenom"><b>Prénom</b> </label>
+                <br>
+                    <input type="text" id="idPrenom" name="prenom" minlength="1" maxlength="30" placeholder=Prénom required='required'>
+                </div>
+                <br>
+                <div>
+                    <label for="idTel"><b>Téléphone (facultatif veuillez mettre 0000000000 pour validez)</b> </label>
+                <br>
+                    <input type="text" id="idTel" name="tel" minlength="10" maxlength="10" placeholder="01 23 45 67 89" required pattern="[0-9]{10}">
+                </div>
+                <br>
+                <div>
+                    <label for="idEmail"><b> Email <span class="text-danger"></span></b> </label>
+                <br>
+                    <input type="text" id="idEmail" name="email" multiple minlength="10" maxlength="30" placeholder="paul@exemple.com" required='required'>  
+                </div>
+                <br>
+                <div>
+                    <label for="Nombre_de_personnes"><b>Nombre de personnes</b> </label>
+                <br>
+                    <input type="number" id="Nombre_de_personnes" name="Nombre_de_personnes" placeholder="0" step="1" min="1" max="30" required='required'>
+                    <span id="nombre_manquant"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="date"><b>Date souhaitée</b> </label>
+                <br>
+                    <input type="date" id="date" name="date" min="2021-11-22" max="2022-12-31" required='required'>
+                    <span class="validity"></span>                    
+                </div>
+                <br>
+                <h2 style="margin-left: 0%">
+                    <b>Réservation</b>
+                </h2>
+                <br>
+                <div>
+                    <label for="Activité"><b>Activité n°1</b> :</label>
+                    <select id="Activité">
+                        <option value="valeur1" selected >---</option>
+                        <option value="valeur1" >Bowling</option>
+                        <option value="valeur2" >Billard</option>
+                        <option value="valeur3" >Laser Game</option>
+                        <option value="valeur2" >Mini-Golf</option>
+                        <option value="valeur2" >Paintball</option>
+                        <option value="valeur2" >Jeux d'arcade</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="Activité_1"><b>Activité n°2 (facultative)</b> :</label>
+                    <select id="Activité_1">
+                        <option value="valeur1" selected >---</option>
+                        <option value="valeur1" >Bowling</option>
+                        <option value="valeur2" >Billard</option>
+                        <option value="valeur3" >Laser Game</option>
+                        <option value="valeur2" >Mini-Golf</option>
+                        <option value="valeur2" >Paintball</option>
+                        <option value="valeur2" >Jeux d'arcade</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="Activité_2"><b>Activité n°3 (facultative)</b> :</label>
+                    <select id="Activité_2">
+                        <option value="valeur1" selected >---</option>
+                        <option value="valeur1" >Bowling</option>
+                        <option value="valeur2" >Billard</option>
+                        <option value="valeur3" >Laser Game</option>
+                        <option value="valeur2" >Mini-Golf</option>
+                        <option value="valeur2" >Paintball</option>
+                        <option value="valeur2" >Jeux d'arcade</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="Activité_3"><b>Activité n°4 (facultative)</b> :</label>
+                    <select id="Activité_3">
+                        <option value="valeur1" selected >---</option>
+                        <option value="valeur1" >Bowling</option>
+                        <option value="valeur2" >Billard</option>
+                        <option value="valeur3" >Laser Game</option>
+                        <option value="valeur2" >Mini-Golf</option>
+                        <option value="valeur2" >Paintball</option>
+                        <option value="valeur2" >Jeux d'arcade</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="modepaiement"><b>Mode de paiement</b> </label>
+                    <input type="radio" id="paiementsurplace" name="modepaiement" value="paiementsurplace">
+                    <label for="paiementenligne">Paiement sur place</label>
+                    <input type="radio" id="paiementenligne" name="modepaiement" value="paiementenligne">
+                    <label for="paiementenligne">Paiement en ligne</label>
+                </div>
+                <br>
+                <div style="margin-top: 1%;">
+                    <input type="submit" value="Valider" class="button" onclick="Verification()">
+                    <button type="submit" class="button2" onclick='window.location.reload(false)'>Annuler</button>
+                </div>
+            </form>
+        </header>
+        <table>
+		
+            <thead> </thead>
+    
+            <tbody>
+                <tr>
+                    <th style="background-color: blue">Activités</th>
+                    <th style="background-color: blue">Prix</th>
+                </tr>	
+    
+                <tr>
+                    <th rowspan="1"> Bowling</th>
+                    <td>15 euros </td>
+                </tr>
+    
+                <tr>
+                    <th rowspan="1"> Billard</th>
+                    <td>20 euros </td>
+                </tr>
+    
+                <tr>
+                    <th rowspan="1"> Laser Game</th>
+                    <td>10 euros </td>
+                </tr>
+    
+                <tr>
+                    <th rowspan="1"> Mini-Golf</th>
+                    <td>15 euros </td>
+                </tr>
+
+                <tr>
+                    <th rowspan="1"> Paintball</th>
+                    <td>12 euros </td>
+                </tr>
+
+                <tr>
+                    <th rowspan="1"> Jeux d'arcade</th>
+                    <td>8 euros </td>
+                </tr>
+                
+            </tbody>
+    
+        </table>
+
+        <script src="Réservation.js"></script>
+
+        <hr style="margin-top: 1cm;" class="page_bottom">  <!-- ligne de séparation du bas de page -->
+
+        <footer>
+            <p>© 2015 CommunityFuriousRacingGame</p>
+        </footer>
+    
+	</body>
+</html>

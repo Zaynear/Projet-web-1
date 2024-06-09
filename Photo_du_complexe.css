@@ -1,0 +1,75 @@
+main{
+    color:white;
+}
+
+h1.Titre{
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+div{
+    height: 100%;
+    width: 100%;
+}
+
+div.cadre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.photos{
+    display: flex;
+    justify-content: space-around;    /*permet d'espacé de maniére homogéne par rapport à l'élément centrale*/
+    align-items: center;              /*permet d'aligné le bas de chaque ligne d'image*/
+    flex-direction: row;                /*permer de disposer élément sous forme de ligne*/
+    flex-wrap: wrap;                    /*permet de remettre à la ligne les élément en surplus*/
+    row-gap: 50px ;                    /*espacement entre les lignes*/
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+    perspective: 1000px;
+}
+
+div.photo{
+    transition: 2s;
+    width: 500px;
+    height: 300px;
+    margin: 10px;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    position: absolute;
+    backface-visibility: hidden;
+    height: 300px;
+}
+
+.front{
+    background: url(./Photo/Photo1.jpg) no-repeat;
+    background-size: 500px;
+    width: 500px;
+    transform: rotateY(180deg);
+}
+
+.back{
+    background: url(./Photo/Logo_accueil.jpg) no-repeat;
+    background-size: 500px;
+    width: 500px;
+}
+
+.back:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px 3px whitesmoke;
+}
+
+.front:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px 3px whitesmoke;
+}
+
+
+
+
+

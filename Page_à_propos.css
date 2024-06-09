@@ -1,0 +1,106 @@
+html{
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.logo{
+     display: block;
+     margin: auto;
+     background-color: red; 
+}
+
+#onglets /*On gére les paramétres des onglets*/
+{
+    display: flex;
+    font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 33px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #9EA0A1; /*Ligne de séparation*/
+    margin-left : 0;
+    }
+    #onglets li
+    {
+    display: flex;
+    float : left;
+    height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    background-color: #0981e4;
+    margin : 2px 2px 0 2px !important;  /* marge interieur entre le texte et les bordures des cadres */
+    border-left: 105px solid #9EA0A1; /*Creation des cadres d'onglets*/
+    border-right: 105px solid #9EA0A1;
+    border-top: 5px solid #9EA0A1;
+    border-bottom: 5px solid #9EA0A1;
+
+    }
+    #onglets li.active
+    {
+    border-bottom: 5px solid #9EA0A1;
+    background-color: #ffffff;
+    }
+    #onglets a:hover
+    {
+    background : rgb(134, 212, 7);
+}
+
+.submit:hover
+{
+    background-color:royalblue;
+    color: white;
+}
+
+#position-menu
+{
+    border-top : 1px solid #9EA0A1;
+    padding-top : 10px;
+}
+
+h2{
+     color: white;
+     text-align: center;
+     text-decoration: underline;
+}
+
+h3{
+    color: white;
+    text-align: left;
+    margin-left: 38%;
+
+}
+
+ul,li{
+     color:white; 
+}
+
+li{
+     margin-left: 45%;
+}
+
+p{
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 20px;
+}
+
+b{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+p,b {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-style: gras;
+}
+
+footer {
+    display: flex;
+    border-top : 1px solid #9EA0A1; /*Ligne de séparation*/
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 2mm; /*Pour forcer le footer à se placer en bas de page en augmentent la marge entre le pied de page et le haut du site*/
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+

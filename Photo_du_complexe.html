@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- - SOURCE UTILISÉ:
+         - http://sdz.tdct.org/sdz/menus-en-onglets.html 
+         - https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+         - le cours
+         - https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside 
+         - https://www.byfilling.com/thefacts/comment-ajouter-un-lien-google-maps-dans-votre-site-web
+        -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Photo
+	</title>
+    <link href="Page_D'accueil.css" rel="stylesheet" type="text/css"> <!-- On reprend la fiche css de la page d'accueil car il est inutile de donnée un style spécifique à cette page -->
+    <link rel="stylesheet" href="Photo_du_complexe.css" type="text/css"> <!-- A partir de maintenant, nous avons besoin d'utliser un feuille de style CSS pour ajouter des images que
+    l'on disposera à l'aide de flexbox (Sorte de conteneur) -->
+</head>
+<body>
+    
+    <header>
+    <h1 style=" margin-left: 30%; margin-right: 30%;background-color: red; padding-bottom: 1%;padding-top: 1% ">
+        <img src="Photo/Logo_accueil.png" alt="Mon image" height="150" width="300" class="logo">
+        <nav style="text-align-last: center;">
+            <!-- Un formulaire de recherche est une autre façon de naviguer de
+                 façon non‑linéaire dans un site introduit via le site suivant https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+            <form>
+              <input type="search" name="accueil" placeholder="Rechercher">
+              <input type="submit" value="Valider" class="submit">
+            </form>
+       </nav>
+    </h1>
+
+    
+    <div id="position-menu">
+        <ul id="onglets">
+          <li style="font-size: 5mm"><a href="Page_D'accueil.html" > Accueil </a></li>
+          <li style="font-size: 5mm"><a href="Réservation.html"> Billetterie </a></li>
+          <li class="active" style="font-size: 5mm"><a href="Photo_du_complexe.html"> Photo </a></li>
+          <li style="font-size: 5mm"><a href="Inscription.html"> S'inscrire </a></li>
+          <li style="font-size: 5mm"><a href="Connexion.html"> Se_connecter </a></li>
+          <li style="font-size: 5mm"><a href="Page_à_propos.html"> À_propos </a></li>
+        </ul>
+    </div>
+
+    </header>
+
+    <main>
+        <!--mettre des images du batiment et des activité ici-->
+        <div class="cadre">
+            <h1 class="Titre"> Photos</h1>
+            <p style="font-size: 30px;color:goldenrod;">
+                cliquez sur un logo pour voir une photo.
+            </p>
+            <!-- Toutes les photos -->
+            <div class="photos">
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 1 -->
+                    <div class="front">
+                        <img src="Photo/Photo1.jpg" alt="Photo d'une piste de bowling" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)"">
+                    <!-- Image numéro 2 -->
+                    <div class="front">
+                        <img src="Photo/Photo2.jpg" alt="Photo boule de bowling" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 3 -->
+                    <div class="front">
+                        <img src="Photo/Photo3.jpg" alt="Photo salle de bowling" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 4 -->
+                    <div class="front">
+                        <img src="Photo/Photo4.jpg" alt="Photo kart" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 5 -->
+                    <div class="front">
+                        <img src="Photo/Photo5.jpg" alt="Photo piste de karting avec kart"  width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 6 -->
+                    <div class="front">
+                        <img src="Photo/Photo6.jpg" alt="Photo scéance de laser game" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 7 -->
+                    <div class="front">
+                        <img src="Photo/Photo7.jpg" alt="Photo table de billard" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 8 -->
+                    <div class="front">
+                        <img src="Photo/Photo8.jpg" alt="Photo table de billard" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 9 -->
+                    <div class="front">
+                        <img src="Photo/Photo9.jpg" alt="Photo extérieur de l'espace de paintball" width="500"> 
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 10 -->
+                    <div class="front">
+                        <img src="Photo/Photo10.jpg" alt="Photo aire de paintball" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 11 -->
+                    <div class="front">
+                        <img src="Photo/Photo11.jpg" alt="Photo aire de golf" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 12 -->
+                    <div class="front">
+                        <img src="Photo/Photo12.jpg" alt="Photo du coin arcade" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 13 -->
+                    <div class="front">
+                        <img src="Photo/Photo13.jpg" alt="Photo d'une piste de bowling" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+                
+                <div class="photo" onclick="flip(event)">
+                    <!-- Image numéro 14 -->
+                    <div class="front">
+                        <img src="Photo/Photo14.jpg" alt="Photo du lieu de restauration" width="500">
+                    </div>
+                    <div class="back">                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Script Javascript pour ajouter des animations sur les différentes photos -->
+    <script src="Photo_du_complexe.js"></script>
+
+    <hr size="1cm" style="margin-top: 1cm;">  <!-- ligne de séparation du bas de page -->
+
+    <footer>
+        <p>© 2015 CommunityFuriousRacingGame</p>
+    </footer>
+    
+</body>
+</html>

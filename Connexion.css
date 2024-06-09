@@ -1,0 +1,127 @@
+html{
+    font-family: sans-serif;
+    background: url(./Photo/fond_connexion.jpg);
+}
+
+.logo{
+     display: block;
+     margin: auto;
+     background-color: red; 
+}
+
+/*----------------------------Modéle d'onglet fournit par Louis Denoual et réadapyter pour les onglets s'inscrire et se connecter--------------------------------------------------------*/
+
+.menu {
+    display: flex;                /* Transformation en flexbox */
+    padding:0;                    /* Suppression des marges internes */
+    justify-content: center;/* Alignements des liens dans le menu */
+}
+.menu li {
+    list-style-type: none ;       /* Suppression des puces */
+  
+}
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */   
+    margin: 0.5rem;               /* Marges externes */
+    padding: 0.4rem 0;            /* Marges internes */
+    text-align: center;           /* Centrage du texte */   
+    background-color: #9EA0A1;    /* Arrière-plan */
+    color: blanchedalmond;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid blanchedalmond;       /* Ajout d'une bordure */
+    border-radius: 4px;           /* Arrondis des bordures */
+    transition: all 1s ;          /* Ajout des effets de transition */
+}
+.menu a.actif {    
+    background-color: rgb(0, 0, 0) ; 
+    color: #1ABC9C ;
+    border-color: #1ABC9C ;
+}
+.menu a:hover,
+.menu a:hover.actif{
+    background-color: blanchedalmond;
+    color: rgb(148, 17, 12);
+    border-color: rgb(148, 17,12);
+}
+
+.submit:hover
+{
+    background-color:rgb(134, 212, 7);
+    color: white;
+}
+
+#position-menu
+{
+    border-bottom : 1px solid #9EA0A1;
+    padding-bottom : 10px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+h1{
+    color: white;
+}
+
+h2{
+     color: white;
+     text-align: center;
+     text-decoration: underline;
+}
+
+h3{
+    color: white;
+    text-align: center;
+}
+
+
+ul,li{
+     color:white; 
+}
+
+p{
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 20px;
+}
+
+b{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+p,b {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-style: gras ;
+}
+
+.button:hover {
+    background-color:rgb(98, 190, 22);
+}
+
+.button{
+    display: flex;
+    align-items: flex-start;
+}
+
+div.connect{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+footer {
+    display: flex;
+    border-top : 1px solid #9EA0A1; /*Ligne de séparation*/
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 2mm; /*Pour forcer le footer à se placer en bas de page en augmentent la marge entre le pied de page et le haut du site*/
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+
+

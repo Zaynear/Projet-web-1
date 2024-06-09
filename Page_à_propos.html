@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		À propos
+	</title>
+    <link rel="stylesheet" href="Page_à_propos.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 style=" margin-left: 30%; margin-right: 30%;background-color: red; padding-bottom: 1%;padding-top: 1% ">
+            <img src="Photo/Logo_accueil.png" alt="Mon image" height="150" width="300" class="logo">
+            <nav style="text-align-last: center;">
+                <!-- Un formulaire de recherche est une autre façon de naviguer de
+                     façon non‑linéaire dans un site introduit via le site suivant https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+                <form>
+                  <input type="search" value="" name="accueil" placeholder="Rechercher" OnKeyPress="if (event.keyCode == 13)FindNext()" class="submit" id="findField">
+                  <input type="submit" value="Valider" class="submit" OnClick="FindNext()">
+                </form>
+           </nav>
+        </h1>
+    
+        
+        <div id="position-menu">
+            <ul id="onglets">
+              <li  style="font-size: 5mm"><a href="Page_D'accueil.html" > Accueil </a></li>
+              <li style="font-size: 5mm"><a href="Réservation.html"> Billetterie </a></li>
+              <li style="font-size: 5mm"><a href="Photo_du_complexe.html"> Photo </a></li>
+              <li style="font-size: 5mm"><a href="Inscription.html"> S'inscrire </a></li>
+              <li style="font-size: 5mm"><a href="Connexion.html"> Se_connecter </a></li>
+              <li class="active" style="font-size: 5mm"><a href="Page_à_propos.html"> À_propos </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+	<ul>
+	<h2>Qui Sommes nous ?</h2>
+		<ul>
+				<li>ZAGHOUINI Redwane<br></li>
+				<li>VIVET Paul</li>
+                <li>TALL Moussa</li>
+		</ul>
+	<p> <b> Nous sommes 3 élèves d'EFREI Paris en L3 NEW Promo 2024 et nous sommes aussi dans le même groupe (Le groupe B) <br>
+        Nous faisons ce site dans le cadre de notre projet "Programmation Web" </b>
+    </p>	
+	<h2>Pourquoi ce site en particuler ?</h2>
+    <p> <b> L'idée nous est venu après avoir rechrché un thème de site regroupant toutes les conditions attendu par le cahier des charges.
+        Nous voulions quelque chose à la fois originale et faisable à notre niveau actuel.
+        <br>De plus, Un site ayant pour thème principal <b style="color: blue;text-decoration: underline;"> une salle de bowling diversifié</b>  
+        ,nous semblait être une bonne idée pour réunir d'autres compétences et en apprendre de nouvelles.</b>
+    </p>
+	<h2>La repartition du travail</h2>
+		<ul>
+				<li style="margin-left: 50mm; font-size: 5mm; font-style: gras"><b style="text-decoration: underline; color: burlywood;">ZAGHOUINI Redwane:</b> C'est occupé de la partie accueil, du logo, des onglets
+                    de page, de la barre de navigation, du background-color et de la mini map. <br></li>
+                <li style="margin-left: 50mm; font-size: 5mm; font-style: gras"><b style="text-decoration: underline; color: burlywood;">VIVET Paul:</b> C'est chargé de la partie Billetterie, du tableau, du formulaire
+                    de page, de la mise en relation formulaire tableau et du "hover" des boutons de formulaire. <br></li>
+                <li style="margin-left: 50mm; font-size: 5mm; font-style: gras"><b style="text-decoration: underline; color: burlywood;">TALL Moussa:</b> À gerez la page "à propos" que voici, du footer, des lignes
+                    de sépartion de bas de page,de l'image de fin, du lien externe et des remerciement. <br></li> 
+		</ul>
+			</li>
+
+	</ul>
+   	<h3>Pour contacter Redwane via Linkedln → <a href="https://www.linkedin.com/in/redwane-zaghouini-71aa3321b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BaKzFBLILRCyd%2BIvs3MRB5Q%3D%3D" target="_blank"> C'est ici </a> 😄 </h3>
+       <h3 >Pour contacter Tall Moussa via linkedln → <a href="https://www.linkedin.com/in/moussa-tall-210840222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BeOQaBbofRQ2858FI4VQiJQ%3D%3D" target="_blank"> c'est ici</a> 😄 </h3>
+       <h3>Pour contacter VIVET Paul via linkedln → <a href="https://www.linkedin.com/in/paul-vivet-8a9912218?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIbRPuqSOSeOoQSulVAbefQ%3D%3D"  target="_blank"> c'est ici</a> 😄 </h3>
+       <p>Nous vous remercions pour votre attention au plaisir de vous revoir</p>
+    </main>
+
+    <div style=" display: flex; justify-content: center">
+        <img src="Photo/image_de_bowling.jpg" alt="Mon image">
+    </div>
+    
+
+    <script>
+
+        // fonction qui permet de trouver un élément réadapter grâce à cette exemple Le code:(https://www.developpez.net/forums/anocode.php?id=2837f9cab9d25f16e55a555a374313a2) le forum(https://www.developpez.net/forums/d1550962/javascript/general-javascript/barre-recherche/)
+        function FindNext () 
+        {
+            var str = document.getElementById ("findField").value;
+            if (str == "") {
+            alert ("Please enter some text to search!");
+            return;
+            }
+            var supported = false;
+            var found = false;
+            if (window.find) {        // recherche dans la page
+                supported = true;
+                    // si du contenu est séléctionnné, Le début de la recherche est séléctionné sera la position finale de la sélection
+                    found = window.find(str);
+            }
+            else {
+                if (document.selection && document.selection.createRange) { 
+                    var textRange = document.selection.createRange ();
+                    if (textRange.findText) {   
+                        supported = true;
+                        // si du contenu est sélectionné, la position de départ de la recherche sera la position après la position de départ de la sélection
+                        if (textRange.text.length > 0) {
+                            textRange.collapse (true);
+                            textRange.move ("character", 1);
+                        }
+    
+                        found = textRange.findText (str);
+                        if (found) {
+                            textRange.select ();
+                        }
+                    }
+                }
+            }
+            if (supported) {
+                if (!found) {
+                    alert ("The following text was not found:\n" + str);
+                    window.open("https://www.google.com/search?q=" + str);
+                }
+                if (found) {
+                    alert("le mot "+ str +" à été trouvé.");
+                }
+            }
+            else {
+                alert ("Your browser does not support this example!");
+            }
+        }
+    </script>
+
+    <hr size="1cm" style="margin-top: 1cm;">  <!-- ligne de séparation du bas de page -->
+
+    <footer>
+        <p>© 2015 CommunityFuriousRacingGame</p>
+    </footer>
+
+</body>
+</html>

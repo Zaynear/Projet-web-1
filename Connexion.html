@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- - SOURCE UTILISÉ:
+         - http://sdz.tdct.org/sdz/menus-en-onglets.html 
+         - https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+         - le cours
+         - https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside 
+         - https://www.byfilling.com/thefacts/comment-ajouter-un-lien-google-maps-dans-votre-site-web
+        -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Connexion
+	</title>
+    <link href="Connexion.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <header>
+    <h1 style=" margin-left: 30%; margin-right: 30%;background-color: red; padding-bottom: 1%;padding-top: 1% ">
+        <img src="Photo/Logo_accueil.png" alt="Mon image" height="150" width="300" class="logo">
+        <nav style="text-align-last: center;">
+            <!-- Un formulaire de recherche est une autre façon de naviguer de
+                 façon non‑linéaire dans un site introduit via le site suivant https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+            <form>
+              <input type="search" value="" name="accueil" placeholder="Rechercher" OnKeyPress="if (event.keyCode == 13)FindNext()" class="submit" id="findField">
+              <input type="submit" value="Valider" class="submit" OnClick="FindNext()">
+            </form>
+       </nav>
+    </h1>
+
+    
+    <div id="position-menu">
+        <ul class="menu">
+            <li>
+                <a href="Page_D'accueil.html"> Accueil</a>
+            </li>
+            <li>
+                <a href="Réservation.html">Billetterie</a>
+            </li>
+            <li>
+                <a href="Photo_du_complexe.html">Photo</a>
+            </li>
+            <li>
+                <a href="Inscription.html">S'inscrire</a>
+            </li>
+            <li class="active" style="font: size 5mm">
+                <a href="Connexion.html" style="background-color: blue">Se connecter</a>
+            </li>
+            <li>
+                <a href="Page_à_propos.html">À propos</a>
+            </li>
+        </ul>
+    </div>
+    </header>
+
+    <h1>
+        <b style="text-decoration: underline;color: aqua;margin-left: 45%"><connecter-vous>Connecter-vous</connecter-vous></b>
+    </h1>
+
+    <div class="connect">
+        <form action="/ma-page-de-traitement" method="post" style="margin-left: 5%">
+            <div>
+                <label for="nom d'utilisateur"><b>Nom d'utilisateur : </b> </label>
+                <input type="text" id="nom_d'utilisateur" name="user_nom" minlength="1" maxlength="30" placeholder="nom d'utilisateur" required>
+            </div>
+            <br>
+            <div>
+                <label for="mot de passe"><b>Mot de passe :</b> </label>
+                <input type="password" id="motdepasse" name="motdepasse" minlength="1" maxlength="30" placeholder="mot de passe" required>
+                <input type="checkbox" onclick="Afficher()"> <b style="font-size: 4.5mm;">Afficher le mot de passe</b> </input>
+            </div>
+            <br>
+            <br>
+            <form action="Connexion.html" >
+                <button type="submit" class="button" style="margin-left: 35%">Valider</button>
+            </form>
+        </form>
+    </div>
+
+    <script>
+
+        // fonction qui permet de trouver un élément réadapter grâce à cette exemple Le code:(https://www.developpez.net/forums/anocode.php?id=2837f9cab9d25f16e55a555a374313a2) le forum(https://www.developpez.net/forums/d1550962/javascript/general-javascript/barre-recherche/)
+        function FindNext () 
+        {
+            var str = document.getElementById ("findField").value;
+            if (str == "") {
+            alert ("Please enter some text to search!");
+            return;
+            }
+            var supported = false;
+            var found = false;
+            if (window.find) {         // recherche dans la page
+                supported = true;
+                    // si du contenu est séléctionnné, Le début de la recherche est séléctionné sera la position finale de la sélection
+                    found = window.find(str);
+            }
+            else {
+                if (document.selection && document.selection.createRange) { 
+                    var textRange = document.selection.createRange ();
+                    if (textRange.findText) {   
+                        supported = true;
+                            // si du contenu est sélectionné, la position de départ de la recherche sera la position après la position de départ de la sélection
+                        if (textRange.text.length > 0) {
+                            textRange.collapse (true);
+                            textRange.move ("character", 1);
+                        }
+    
+                        found = textRange.findText (str);
+                        if (found) {
+                            textRange.select ();
+                        }
+                    }
+                }
+            }
+            if (supported) {
+                if (!found) {
+                    alert ("The following text was not found:\n" + str);
+                    window.open("https://www.google.com/search?q=" + str);
+                }
+                if (found) {
+                    alert("le mot "+ str +" à été trouvé.");
+                }
+            }
+            else {
+                alert ("Your browser does not support this example!");
+            }
+        }
+
+        // Pour afficher le mot de passe
+        function Afficher()
+        { 
+            var input = document.getElementById("motdepasse"); 
+            if (input.type === "password")
+            { 
+                input.type = "text";    //modifie le type de l'input donc quand on clique le type devient sous forme de texte si il etait sous forme de mot de passe avant
+            } 
+            else
+            { 
+                input.type = "password";     ////modifie le type de l'input donc quand on clique le type devient sous forme de mot de passe si il etait sous forme de texte avant
+            } 
+        } 
+
+    </script>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <hr size="1cm" style="margin-top: 1cm;">  <!-- ligne de séparation du bas de page -->
+
+    <footer>
+        <p>© 2015 CommunityFuriousRacingGame</p>
+    </footer>
+    
+</body>
+</html>

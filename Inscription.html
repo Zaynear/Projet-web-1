@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- - SOURCE UTILISÉ:
+         - http://sdz.tdct.org/sdz/menus-en-onglets.html 
+         - https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+         - le cours
+         - https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside 
+         - https://www.byfilling.com/thefacts/comment-ajouter-un-lien-google-maps-dans-votre-site-web
+        -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Inscription
+	</title>
+    <link href="Inscription.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <header>
+    <h1 style=" margin-left: 30%; margin-right: 30%;background-color: red; padding-bottom: 1%;padding-top: 1% ">
+        <img src="Photo/Logo_accueil.png" alt="Mon image" height="150" width="300" class="logo">
+        <nav style="text-align-last: center;">
+            <!-- Un formulaire de recherche est une autre façon de naviguer de
+                 façon non‑linéaire dans un site introduit via le site suivant https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+            <form>
+              <input type="search" name="accueil" placeholder="Rechercher" class="submit">
+              <input type="submit" value="Valider" class="submit">
+            </form>
+       </nav>
+    </h1>
+
+    
+    <div id="position-menu">
+        <ul class="menu">
+            <li>
+                <a href="Page_D'accueil.html"> Accueil</a>
+            </li>
+            <li>
+                <a href="Réservation.html">Billetterie</a>
+            </li>
+            <li>
+                <a href="Photo_du_complexe.html">Photo</a>
+            </li>
+            <li class="active" style="font: size 5mm">
+                <a href="Inscription.html" style="background-color: blue">S'inscrire</a>
+            </li>
+            <li>
+                <a href="Connexion.html" >Se connecter</a>
+            </li>
+            <li>
+                <a href="Page_à_propos.html">À propos</a>
+            </li>
+        </ul>
+    </div>
+    </header>
+
+    <main>
+        <h1>
+            Bienvenue à vous, connecter-vous pour bénéficier des avantages en exclusivité !
+        </h1>
+        <div style="display: flex;justify-content: center;">
+            <form action="Information" method="post">
+                <div><strong>Nom :</strong> <input type="text" id="Nom" name="user_nom" minlength="1" maxlength="30" placeholder=Nom required></div>
+                <br>
+                <div><strong>Prénom :</strong> <input type="text" id="Prénom" name="user_prénom" minlength="1" maxlength="30" placeholder="Prénom" required></div>
+                <br>
+                <div><strong>Âge :</strong> <input type="number" id="Âge" name="user_age" placeholder="0" step="1" min="1" max="100" value="0" required></div>
+                <br>
+                <div><strong style="background-color:rgb(2, 2, 68)">Adresse e-mail :</strong> <input type="text" id="Prénom" name="user_prénom" minlength="1" maxlength="50" placeholder="xyz@gmail.com" required></div>
+                <br>
+                <div><strong style="background-color:rgb(2, 2, 68)">Adresse :</strong> <input type="text" id="Adresse" name="user_Adresse" minlength="1" maxlength="50" placeholder="Adresse" required></div>
+                <br>
+                <div><strong style="background-color:rgb(2, 2, 68)">Code Postale :</strong><input type="text" id="Code_Postale" name="user_Code_Postale" minlength="5" maxlenght="5"  placeholder="xxxxx" required></div>
+                <br>
+                <div>	
+                    <input type="button" class="bouton" value="Valider">
+                    <input type="reset" class="bouton" value="annuler">
+                </div>  
+            </form>
+        </div>
+        
+        
+
+
+    </main>
+
+    <script>
+        
+    /*fetch("https://jsonplaceholder.typicode.com/albums/1/photos?_start=")
+    .then((response) => response.json())
+    .then(function (data) { console.log(data);})
+
+    var myHeaders = new Headers();
+    var myInit = { method: 'GET', headers: myHeaders, mode: 'cors', cache: 'default' };
+
+    fetch('flowers.jpg',myInit)
+    .then(function(response) {  return response.blob(); })
+    .then(function(data)  {var objectURL = URL.createObjectURL(data);   data.src = objectURL;});*/
+
+    </script> 
+  
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <hr size="1cm" style="margin-top: 1cm;">  <!-- ligne de séparation du bas de page -->
+
+    <footer>
+        <p>© 2015 CommunityFuriousRacingGame</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- - SOURCE UTILISÉ:
+         - http://sdz.tdct.org/sdz/menus-en-onglets.html 
+         - https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+         - le cours
+         - https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside 
+         - https://www.byfilling.com/thefacts/comment-ajouter-un-lien-google-maps-dans-votre-site-web
+        -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Accueil
+	</title>
+    <link href="Page_D'accueil.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1 style=" margin-left: 30%; margin-right: 30%;background-color: red; padding-bottom: 1%;padding-top: 1% ">
+            <img src="Photo/Logo_accueil.png" alt="Mon image" height="150" width="300" class="logo">
+            <nav style="text-align-last: center;">
+                <!-- Un formulaire de recherche est une autre façon de naviguer de
+                    façon non‑linéaire dans un site introduit via le site suivant https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+                <form>
+                <input type="search" value="" name="accueil" placeholder="Rechercher" OnKeyPress="if (event.keyCode == 13)FindNext()" class="submit" id="findField">        <!--OnKeyPress="if (event.keyCode == 13)recherche()" > permet de valider avec la touche entrer du clavier-->
+                <input type="submit" value="Valider" class="submit" OnClick="FindNext()" >
+                </form>
+            </nav>
+        </h1>
+        
+        <div id="position-menu">
+            <ul id="onglets">
+            <li class="active" style="font-size: 5mm"><a href="Page_D'accueil.html" > Accueil </a></li>
+            <li style="font-size: 5mm"><a href="Réservation.html"> Billetterie </a></li>
+            <li style="font-size: 5mm"><a href="Photo_du_complexe.html"> Photo </a></li>
+            <li style="font-size: 5mm"><a href="Inscription.html"> S'inscrire </a></li>
+            <li style="font-size: 5mm"><a href="Connexion.html"> Se_connecter </a></li>
+            <li style="font-size: 5mm"><a href="Page_à_propos.html"> À_propos </a></li>
+            </ul>
+        </div>
+
+        <h2>
+            <ul style="text-decoration: underline">
+            Bienvenue à vous sur le site officiel de FURIOUS RACING GAME !
+            </ul>
+            <ul style="font-size: 1cm; font-weight:500">
+                ⚠ A compter du jeudi 30 septembre, et par mesure gouvernementale, la présentation d'un Pass Sanitaire valide est obligatoire sur les lieux pour toutes personnes agée de 12 ans 2 mois et plus !
+            </ul>
+        </h2>
+    </header>
+
+    <main>
+    <div>
+        <aside>
+        <h3 style="font-style: italic; font-size: 12mm; margin-top: -5mm ; text-decoration: underline royalblue;">Information</h3>
+        <ul>
+            <p style="text-decoration: underline; margin-top: -10mm"> Créneaux d'ouverture: </p>
+            <li><a style="text-decoration: underline;">Lundi:</a> 10h - 22h </li>
+            <br><li><a style="text-decoration: underline;">Mardi:</a>    10h - 22h </li>
+            <br><li><a style="text-decoration: underline;">Mercredi:</a> 10h - 22h </li>
+            <br><li><a style="text-decoration: underline;">Jeudi:</a>   10h - 22h </li>
+            <br><li><a style="text-decoration: underline;">Vendredi:</a> 10h - 22h </li>
+            <br><li><a style="text-decoration: underline;">Samedi:</a>   10h - 19h </li>
+            <br><li><a style="text-decoration: underline;">Dimanche:</a> fermé </li>
+        </ul>
+        <p>
+            Notre complexe de loisirs <a style="color: royalblue">Furious Racing Games</a> se trouve à Grandline - 00212, Logtown. 
+            <br> Nos locaux se trouve à proximité du centre commercial et de la gare. 
+        </p>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d871.9660973405483!2d-13.79478682080209!3d29.050591948890922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc463d95b84846eb%3A0xc7d5e3f449fb6aa1!2sTinajo!5e0!3m2!1sfr!2sfr!4v1637466680321!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        </aside>
+
+        <strong style="margin-left: 1%;    color: white;    font-family: Arial, Helvetica, sans-serif;       font-style: normal;         font-size: 20px;">Venez profitez de notre piste de Karting ainsi que d'autre activité, tel que : </strong>
+
+        <ul style="font-size: 0.6cm">
+            <li style="color: yellow">Le bowling</li>
+            <li style="color: yellow">Le Laser game</li>  
+            <li style="color: yellow">Le Billard</li> 
+            <li style="color: yellow">Le Paintball</li>  
+            <li style="color: yellow">Les Jeux d'arcades</li>  
+        </ul>
+    </div>
+
+    <p>
+    Nous offrons un large choix de service à notre clientèle pour que votre journée se passe le mieux possible. Le restaurant est ouvert de 10h à 22h.
+    De plus nous avons élaboré pour vous des formules adaptées à tous vos événements ! 
+    </p>
+    <hr>
+    <p>
+    Notre complexe est équipé de 24 pistes de bowling avec barrières automatiques.
+    
+    les enfants pourront rivaliser avec les adultes dès 6 ans grâce à nos toboggan à boule ! 
+    
+    <br> <p> De plus une consommation vous êtes offertes pour chaque partie de bowling effectué. Cependant la nourriture personnel n'est pas
+    
+    autorisé sur le complexe de jeu et il en ai de même pour la fumette, une terrasse extérieure vous est donc mis à disposition dans le cas échéant.
+
+    Par mesure de sécurité, les animaux ne sont pas autorisé même tenu en laisse. Le batiment est entièrement climatisé pour votre confort. </p>
+
+
+    <br>
+    <br>
+
+
+    <a href="Reglement.html" target="_blank" style="font-family: Arial, Helvetica, sans-serif; font-size: 30px"> <br> Voici la page de Reglement!</a>
+
+        
+    <br>
+    <br>
+    <br>
+
+    <strong> ⚠ Attention Enigme : Pour les petits curieux qui veulent le lien des musiques, faites parler 
+        votre âme de programmeur web et aller chercher entre les lignes , la solution est entre vos "main".😉 (ps: si vous avez trouver cette phrase en ayant fait ctrl A ou via la 
+        sélection vous étes des boss.)
+    </strong>
+
+    <div id="d1">
+        <b style="margin-left: 40%;">hey !</b>
+        <strong id="p1" class="hide">  ⚠ Attention Enigme : Pour les petits curieux qui veulent le lien des musiques, faites parler 
+        votre âme de programmeur web et aller chercher entre les lignes , la solution est entre vos "main".😉 </strong>
+    </div>
+
+
+    <noscript style="color: white;"> Lien des musiques ☻ : https://youtu.be/dSDaS4BlO14 et https://youtu.be/ZNRBdaDYCFs </noscript>
+    
+    <!--Url source pour savoir comment mettre un audio en fond : https://developer.mozilla.org/fr/docs/Web/HTML/Element/audio -->
+    <!-- Fusion de 2 audio en ligne via "https://clideo.com/fr/merge-audio" -->
+    <div>
+        <audio controls src="mix_6m19s.mp3" style="color: wheat" loop></audio>
+    </div>
+
+    <script>
+
+    // fonction qui permet de trouver un élément réadapter grâce à cette exemple Le code:(https://www.developpez.net/forums/anocode.php?id=2837f9cab9d25f16e55a555a374313a2) le forum(https://www.developpez.net/forums/d1550962/javascript/general-javascript/barre-recherche/)
+    function FindNext () 
+    {
+        var str = document.getElementById ("findField").value;
+        if (str == "") {
+        alert ("Please enter some text to search!");
+        return;
+        }
+        var supported = false;
+        var found = false;
+        if (window.find) {        // recherche dans la page
+            supported = true;
+                // si du contenu est séléctionnné, Le début de la recherche est séléctionné sera la position finale de la sélection
+                found = window.find(str);
+        }
+        else {
+            if (document.selection && document.selection.createRange) { 
+                var textRange = document.selection.createRange ();
+                if (textRange.findText) {   
+                    supported = true;
+                    // si du contenu est sélectionné, la position de départ de la recherche sera la position après la position de départ de la sélection
+                    if (textRange.text.length > 0) {
+                        textRange.collapse (true);
+                        textRange.move ("character", 1);
+                    }
+
+                    found = textRange.findText (str);
+                    if (found) {
+                        textRange.select ();
+                    }
+                }
+            }
+        }
+        if (supported) {
+            if (!found) {
+                alert ("The following text was not found:\n" + str);
+                window.open("https://www.google.com/search?q=" + str);
+            }
+            if (found) {
+                alert("le mot "+ str +" à été trouvé.");
+            }
+        }
+        else {
+            alert ("Your browser does not support this example!");
+        }
+    }
+    // Le seul soucis de la fonction précédente c'est quelle ne garde pas la surbrillance 
+
+    
+    //méthode simplifié de recherche mais qui ne prend pas en compte tout les cas
+    /*function FindNext (){
+        var str = document.getElementById("findField").value;
+        find(str);
+    } */
+
+    
+    // animation pour l'énigme.
+    let d1 = document.getElementById("d1");
+    let p1 = document.getElementById("p1");
+    d1.addEventListener("mouseover", () => {p1.style.display = "flex"});
+    d1.addEventListener("mouseout", () => {p1.style.display = "none";});
+            
+    </script>
+
+    </main> 
+
+    <hr style="margin-top: 1cm;">  <!-- ligne de séparation du bas de page -->
+
+    <footer>
+        <p>© 2015 CommunityFuriousRacingGame</p>
+    </footer>
+    
+</body>
+</html>

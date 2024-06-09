@@ -1,0 +1,126 @@
+html{
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.logo{
+     display: block;
+     margin: auto;
+     background-color: red; 
+}
+
+#onglets /*On gère les paramètres des onglets*/
+{
+    display: flex;
+    font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 33px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #9EA0A1; /*Ligne de séparation*/
+    margin-left : 0;
+}
+
+#onglets li
+{
+    display: flex;
+    float : left;
+    height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    background-color: #0981e4;
+    margin : 2px 2px 0 2px !important;  /* marge intérieure entre le texte et les bordures des cadres */
+    border-left: 105px solid #9EA0A1; /*Création des cadres d'onglets*/
+    border-right: 105px solid #9EA0A1;
+    border-top: 5px solid #9EA0A1;
+    border-bottom: 5px solid #9EA0A1;
+}
+
+#onglets li.active
+{
+    border-bottom: 5px solid #9EA0A1;
+    background-color: #ffffff;
+}
+
+#onglets a:hover
+{
+    background : rgb(134, 212, 7);
+}
+
+.submit:hover
+{
+    background-color:royalblue;
+    color: white;
+}
+
+#position-menu
+{
+    border-top : 1px solid #9EA0A1;
+    padding-top : 10px;
+}
+h2{
+     color: white;
+     text-align: center;
+}
+
+ul,li{
+     color:white; ;
+}
+
+li{
+     margin-left: 1%;
+}
+
+p{
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 20px;
+}
+
+b{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+aside { /* Pour mettre la partie information sur le coté droit de notre page */
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+audio {
+    margin-left: 42%;
+    padding-top: 10px;
+}
+
+footer {
+    display: flex;
+    border-top : 1px solid #9EA0A1; /*Ligne de séparation*/
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 2mm; /*Pour forcer le footer à se placer en bas de page en augmentent la marge entre le pied de page et le haut du site*/
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+#d1{
+    background-color: black;
+    display: block;
+    width: 600px;
+}
+
+#p1{background-color: #EECC4499;}
+.hide{display: none;}
+
+
+
